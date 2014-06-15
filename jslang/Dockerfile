@@ -1,4 +1,5 @@
-FROM mtvb/golang
+FROM debian:jessie
+MAINTAINER Martin Treusch von Buttlar <dockerfiles@m.t17r.de>
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy git nodejs nodejs-legacy npm \
                                                        sudo zopfli mercurial

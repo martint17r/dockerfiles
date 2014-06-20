@@ -1,6 +1,6 @@
 FROM debian:jessie
 MAINTAINER Martin Treusch von Buttlar <dockerfiles@m.t17r.de>
-RUN apt-get update && apt-get install -yq git mercurial curl
+RUN apt-get update && apt-get install -yq git mercurial curl bzr
 
 ENV PATH $PATH:/go/bin
 ENV GOPATH /go

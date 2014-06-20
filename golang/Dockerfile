@@ -8,4 +8,4 @@ WORKDIR /go
 
 RUN mkdir /go/bin
 RUN (cd bin; curl https://godeb.s3.amazonaws.com/godeb-amd64.tar.gz | tar xz)
-RUN godeb install
+RUN godeb install $(godeb list | grep ^1.2 | grep -v rc | sort -nr | head -n1)
